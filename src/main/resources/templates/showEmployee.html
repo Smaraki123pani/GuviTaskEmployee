@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Staff Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFF2D7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #BFD8AF;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            text-color: black
+        }
+        th {
+            background-color: #395B64;
+            color: #fff;
+             text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #fff;
+        }
+        tr:hover {
+            background-color: #DDDDDD;
+        }
+        a {
+            display: block;
+            width: 150px;
+            padding: 10px;
+            margin: 20px auto;
+            text-align: center;
+            background-color: #116D6E;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #FA7070;
+        }
+        p {
+            text-align: center;
+            color: #666;
+            line-height: 10.0;
+        }
+    </style>
+</head>
+<body>
+<h1>Staff Details</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Location</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="staff : ${staff}">
+        <td th:text="${staff.employeeId}"></td>
+        <td th:text="${staff.employeeName}"></td>
+        <td th:text="${staff.employeeEmail}"></td>
+        <td th:text="${staff.location}"></td>
+    </tr>
+    </tbody>
+</table>
+<br><br>
+<a href="/">Back to Home</a><br><br>
+<br><br>
+
+</body>
+</html>

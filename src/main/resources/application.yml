@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      uri: ""mongodb+srv://Payal123:Payal123@clustersmaraki.smpyrs5.mongodb.net/EmployeeData"
+
+
+
+      thymeleaf:
+        prefix: classpath:/templates/
+        suffix: .html

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFF2D7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        form {
+            width: 30%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 1.5);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 0.5px solid black;
+            border-radius: 10px;
+            box-sizing: border-box;
+            color:black;
+        }
+        button[type="submit"] {
+            width: 100px;
+            padding: 10px;
+            background-color: #116D6E;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align:center;
+            margin:0 auto;
+            display: block;
+        }
+        button[type="submit"]:hover {
+            background-color: #FA7070;
+        }
+        p {
+            text-align: center;
+            color: #666;
+            line-height: 10.0;
+        }
+    </style>
+</head>
+<body>
+<h1>Staff Register</h1>
+<form action="/save" method="post" th:object="${staff}">
+    <label for="employeeId">Employee ID:</label>
+    <input type="text" id="employeeId" name="employeeId" required placeholder="Enter Employee Id" /><br/>
+
+    <label for="employeeName">Name:</label>
+    <input type="text" id="employeeName" name="employeeName" required placeholder="Enter Employee Name" /><br/>
+
+    <label for="employeeEmail">Email:</label>
+    <input type="text" id="employeeEmail" name="employeeEmail" required placeholder="Enter Email" /><br/>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" required placeholder="Enter Location" /><br/>
+
+    <button type="submit">Save</button>
+</form>
+<br><br>
+</body>
+</html>

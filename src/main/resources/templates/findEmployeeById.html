@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Staff by ID</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFF2D7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        form {
+            width: 40%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            width: calc(100% - 10px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            width: 100px;
+            padding: 10px;
+            background-color: #116D6E;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 auto;
+            display: block
+        }
+        button[type="submit"]:hover {
+            background-color: #FA7070;
+        }
+        p {
+            text-align: center;
+            color: #666;
+            line-height: 10.0;
+        }
+    </style>
+</head>
+<body>
+<h1>Find Staff by ID</h1>
+<form action="/findEmpById" method="get">
+    <label>Enter Employee ID
+        <input type="text" name="employeeId"/></label><br/>
+    <button type="submit">Find</button>
+</form>
+<br><br>
+</body>
+</html>
